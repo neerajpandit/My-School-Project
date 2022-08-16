@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<br><hr>
+<br><hr>
+{% block content %}
+<br><hr>
+<hr><br>
+<br><br>
+<div class="section-title">
+        <h2>10 Class Student</h2>
+        </div>
+<h2>10 Claas Student</h2>
+<br>
+<div class="row">
+  
+{% for p in new_student10 %}
+<div class="col-lg-2 mx-5 mb-5">
+<div class="card shadow" style="width: 18rem;">
+  <img src="{{p.img10.url}}" class="img-fluid" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{p.name}}</h5>
+    <p class="card-text text-center text-black">{{p.percent}}</p>
+<!--   <a href="#" class="btn btn-primary">Go somewhere</a>-->
+  </div> 
+</div>
+</div>
+<br>
+{% endfor %}
+</div>
+
+<br><br><br><br>
+{% endblock  %}

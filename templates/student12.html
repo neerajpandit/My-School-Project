@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<br><hr>
+<br><hr>
+{% block content %}
+<br><hr>
+<hr><br>
+<br><br><br>
+<h2 class ="text-center">12 Claas Student</h2>
+<br>
+<div class="row">
+{% for q in new_student12 %}
+<div class="col-lg-2 mx-5 mb-5">
+<div class="card shadow" style="width: 18rem;">
+    <img src="{{q.s_image.url}}" class="img-fluid" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{q.name}}</h5>
+    <p class="card-text">{{q.percent}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+</div>
+<br>
+{% endfor %}
+</div>
+<br><br><br><br>
+{% endblock  %}

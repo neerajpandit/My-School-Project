@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><hr>
+<br>
+<!-- ======= Doctors Section ======= -->
+<section id="doctors" class="doctors section-bg">
+    <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+        <h2>Student</h2>
+        <p>Top Most Student</p>
+        </div>
+
+    <div class="row">
+        {% for p in new_passout %}
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-img">
+                <img src="{{p.passout_image.url}}" class="img-fluid" alt="">
+            <div class="social">
+                <a href="{{p.twitter}}"><i class="bi bi-twitter"></i></a>
+                <a href="{{p.facebook}}"><i class="bi bi-facebook"></i></a>
+                <a href="{{p.insta}}"><i class="bi bi-instagram"></i></a>
+                <a href="{{linked}}"><i class="bi bi-linkedin"></i></a>
+            </div>
+            </div>
+            <div class="member-info">
+                <h4>{{p.name}}</h4>
+                <span>{{p.passion}}</span>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+
+    </div>
+    </section><!-- End Doctors Section -->
+{% endblock %}
